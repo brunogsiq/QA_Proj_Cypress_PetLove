@@ -68,4 +68,50 @@ Cypress.Commands.add("validarRegrasDeNegocioTelaCadastro", () =>
 {
     TelaHome.botaoCadastrePontoDeDoacao
         .click();
+
+    TelaCadastro.campoNome
+        .type("Adoção de Qualidade");
+
+    cy.wait(1250);
+
+    TelaCadastro.campoEmail
+        .type("qadocao@qadocao.com");
+
+    cy.wait(1250);
+
+    TelaCadastro.campoCEP
+        .type("08295-005");
+
+    cy.wait(1250);
+
+    TelaCadastro.botaoBuscarCEP
+        .click();
+        cy.wait(2500);
+
+    TelaCadastro.campoRua
+        .should("be.visible");
+
+    TelaCadastro.campoNumero
+        .type("0109");
+
+    cy.wait(1250);
+
+    TelaCadastro.campoComplemento
+        .type("1910");
+
+    cy.wait(1250);
+
+    TelaCadastro.campoBairro
+        .should("be.visible");
+
+    TelaCadastro.campoCidadeEstado
+        .should("be.visible");
+
+    TelaCadastro.botaoGato
+        .click();
+
+    cy.wait(1250);
+
+    TelaCadastro.botaoCadastrar
+        .click();
 });

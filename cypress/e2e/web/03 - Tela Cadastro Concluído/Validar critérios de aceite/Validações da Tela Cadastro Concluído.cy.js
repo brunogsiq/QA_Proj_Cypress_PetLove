@@ -1,11 +1,10 @@
 /// <reference types="cypress" />
 
-let tela = 1;
+let tela = 2;
 let funcao = 0;
 
-describe(`${++tela}.${++funcao} - Tela Cadastro.`, () =>
+describe(`${++tela}.${++funcao} - Tela Cadastro Concluido.`, () =>
 {
-	
 	let cenario = 0;
 	let teste = 0;
 
@@ -20,7 +19,7 @@ describe(`${++tela}.${++funcao} - Tela Cadastro.`, () =>
 	{
 		it(`Teste ${++teste}`, () =>
 		{
-			cy.validarCriteriosDeAceiteTelaCadastro();
+			cy.validarCriteriosDeAceiteTelaCadastroConcluido();
 		});
 	});
 });
