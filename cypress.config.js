@@ -30,6 +30,10 @@ module.exports = defineConfig(
           "cypress/e2e/web/02 - Tela Cadastro/Tela Cadastro.cy.js - Testes.cy.js",
           "cypress/e2e/web/02 - Tela Cadastro/Validar critérios de aceite/Validações da Tela Cadastro.cy.js",
           "cypress/e2e/web/02 - Tela Cadastro/Validar regras de negócio/Validações da Tela Cadastro.cy.js",
+          "cypress/e2e/web/03 - Tela Cadastro Concluído/Tela Cadastro Concluído.cy.js - Testes.cy.js",
+          "cypress/e2e/web/03 - Tela Cadastro Concluído/Validar critérios de aceite/Validações da Tela Cadastro Concluído.cy.js",
+          "cypress/e2e/web/03 - Tela Cadastro Concluído/Validar regras de negócio/Validações da Tela Cadastro Concluído.cy.js"
+
         ],
         setupNodeEvents(on, config) {
           // implement node event listeners here
