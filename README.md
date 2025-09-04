@@ -1,5 +1,7 @@
 # Petlov
 
+## Link: (https://www.petlov.vercel.app)
+
 **Conectando corações, mudando vidas!**  
 O Petlov é uma plataforma desenvolvida para conectar pessoas a pontos de doação, facilitando a busca por locais onde é possível contribuir com doações para pets. Este projeto utiliza o Cypress para automação de testes end-to-end, garantindo que as funcionalidades essenciais do sistema estejam funcionando conforme o esperado.
 
@@ -78,6 +80,3 @@ Os testes cobrem os seguintes cenários principais:
 1. Clone o repositório do projeto.
 2. Navegue até o diretório do projeto.
 3. Instale as dependências usando:
-
-   ```bash
-   npm install

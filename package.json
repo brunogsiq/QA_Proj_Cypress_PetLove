@@ -1,7 +1,7 @@
 {
   "name": "qa_proj_cypress_petlove",
   "version": "1.0.0",
-  "description": "",
+  "description": "https://petlov.vercel.app/",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^13.15.1",
     "qa_proj_cypress_petlove": "file:"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^10.0.0",
+    "cypress": "^15.0.0",
+    "cypress-multi-reporters": "^2.0.5",
+    "cypress-wait-until": "^3.0.2",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^5.0.0",
+    "mochawesome-report-generator": "^6.2.0"
   }
 }
