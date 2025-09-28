@@ -11,7 +11,7 @@ describe(`${++tela}.${++funcao} - Tela Cadastro Concluido.`, () =>
 
 	beforeEach(() =>
 	{
-		cy.visit(Cypress.env("baseUrl"));
+		cy.visit("https://petlov.vercel.app/");
 
 		cy.wait(2500);
 	});

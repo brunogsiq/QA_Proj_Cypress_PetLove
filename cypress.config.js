@@ -1,42 +1,36 @@
+//baseUrl: "https://petlov.vercel.app/",
 const { defineConfig } = require("cypress");
 
-module.exports = defineConfig(
-{
-    viewportWidth: 1300,
-    viewportHeight: 900,
-    video: true,
-    chromeWebSecurity: false,
-    reporter: "mochawesome",
-    reporterOptions: {
-        reportDir: 'cypress/report',
-        overwrite: true,
-        html: true,
-        json: false,
-        timestamp: 'dd-mm-yyyy_HH-MM-ss'
-    },
-    env: {
-        baseUrl: "https://petlov.vercel.app/",
-    },
-    e2e: {
-        defaultCommandTimeout: 9000,
-        experimentalRunAllSpecs: true,
-        hideXHRInCommandLog: true,
-        //Aqui ficarão todos os meus testes:
-        specPattern: [
-          "cypress/e2e/web/00 - All Tests/AllTests.cy.js",
-          "cypress/e2e/web/01 - Tela Home/Tela Home - Testes.cy.js",
-          "cypress/e2e/web/01 - Tela Home/Validar critérios de aceite/Validações da Tela Home.cy.js",
-          "cypress/e2e/web/01 - Tela Home/Validar regras de negócio/Validações da Tela Home.cy.js",
-          "cypress/e2e/web/02 - Tela Cadastro/Tela Cadastro.cy.js - Testes.cy.js",
-          "cypress/e2e/web/02 - Tela Cadastro/Validar critérios de aceite/Validações da Tela Cadastro.cy.js",
-          "cypress/e2e/web/02 - Tela Cadastro/Validar regras de negócio/Validações da Tela Cadastro.cy.js",
-          "cypress/e2e/web/03 - Tela Cadastro Concluído/Tela Cadastro Concluído.cy.js - Testes.cy.js",
-          "cypress/e2e/web/03 - Tela Cadastro Concluído/Validar critérios de aceite/Validações da Tela Cadastro Concluído.cy.js",
-          "cypress/e2e/web/03 - Tela Cadastro Concluído/Validar regras de negócio/Validações da Tela Cadastro Concluído.cy.js"
+module.exports = defineConfig({
+	viewportWidth: 1300,
+	viewportHeight: 800,
+	video: true,
+	chromeWebSecurity: false,
 
-        ],
-        setupNodeEvents(on, config) {
-          // implement node event listeners here
-        },
-    },
+	reporter: "cypress-mochawesome-reporter",
+	reporterOptions: {
+		reportDir: "cypress/reports/mochawesome",
+		overwrite: true,
+		html: true,
+		json: false,
+		timestamp: "dd-mm-yyyy_HH-MM-ss",
+	},
+
+	e2e: {
+		baseUrl: "https://petlov.vercel.app/",
+		defaultCommandTimeout: 9000,
+		experimentalRunAllSpecs: true,
+		hideXHRInCommandLog: true,
+		specPattern: "cypress/e2e/web/**/*.cy.js",
+			setupNodeEvents(on, config) {
+				require("cypress-mochawesome-reporter/plugin")(on);
+			},
+	},
+
+	env: {
+		dev: "https://www.seuambiente-dev.com",
+		tst: "https://www.seuambiente-tst.com",
+		hml: "https://www.seuambiente-hml.com",
+		prod: "https://www.seuambiente-prod.com",
+	},
 });
