@@ -80,3 +80,6 @@ Os testes cobrem os seguintes cenários principais:
 1. Clone o repositório do projeto.
 2. Navegue até o diretório do projeto.
 3. Instale as dependências usando:
+
+
+Mensagem teste - Deverá ser apagada após documentação completa

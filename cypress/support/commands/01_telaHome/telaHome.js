@@ -8,7 +8,7 @@ import { telaCadastro } from "../../pageObjects/02_telaCadastro/telaCadastro";
 const TelaHome = new telaHome();
 const TelaCadastro = new telaCadastro();
 
-Cypress.Commands.add("validarCriteriosDeAceiteTelaHome", () => 
+Cypress.Commands.add("validarCriteriosDeAceite_TelaHome", () => 
 {
     cy.visit(Cypress.env("baseUrl"));
 
